@@ -38,6 +38,10 @@
 		81A1945E1DB0C3A200985EC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A194681DB0C3EC00985EC0 /* Each.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Each.swift; path = Sources/Each.swift; sourceTree = "<group>"; };
 		81C8F80C1DB0C487009FE6D3 /* EachTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachTestCases.swift; sourceTree = "<group>"; };
+		81C8F80E1DB0C61E009FE6D3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		81C8F8101DB0C62F009FE6D3 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		81C8F8121DB0CB24009FE6D3 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		81C8F8141DB0CB62009FE6D3 /* Each.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Each.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,10 @@
 		81A1943B1DB0C3A100985EC0 = {
 			isa = PBXGroup;
 			children = (
+				81C8F8141DB0CB62009FE6D3 /* Each.podspec */,
+				81C8F8121DB0CB24009FE6D3 /* .swift-version */,
+				81C8F8101DB0C62F009FE6D3 /* CHANGELOG.md */,
+				81C8F80E1DB0C61E009FE6D3 /* README.md */,
 				81A194671DB0C3E100985EC0 /* Sources */,
 				81A194461DB0C3A100985EC0 /* Each */,
 				81A1945B1DB0C3A200985EC0 /* EachTests */,

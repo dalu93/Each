@@ -96,7 +96,7 @@ open class Each {
      the trigger. Return `false` to continue, return `true` to stop it
      */
     public func perform(closure: @escaping VoidBoolClosure) {
-        guard _timer == nil else { return self }
+        guard _timer == nil else { return }
         guard let interval = _timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
         
         isStopped = false
@@ -108,8 +108,6 @@ open class Each {
             userInfo: nil,
             repeats: true
         )
-        
-        return self
     }
     
     
