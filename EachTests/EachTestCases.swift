@@ -37,7 +37,8 @@ class EachTestCases: XCTestCase {
     func testEachStopInClosure() {
         let exp = expectation(description: "Timer waiting")
         
-        let timer = Each(1).seconds.perform() {
+        let timer = Each(1).seconds
+        timer.perform() {
             exp.fulfill()
             return true
         }
@@ -56,7 +57,8 @@ class EachTestCases: XCTestCase {
     func testEachStopAndStartAgain() {
         let exp = expectation(description: "Timer waiting")
         
-        let timer = Each(1).seconds.perform() {
+        let timer = Each(1).seconds
+        timer.perform() {
             exp.fulfill()
             return true
         }
