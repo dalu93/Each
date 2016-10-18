@@ -1,6 +1,8 @@
 # Each
 Elegant ⏱ interface for Swift apps
 
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5805caae4b74d00100717ec7&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5805caae4b74d00100717ec7/build/latest)
+
 Each is a NSTimer bridge library written in Swift.
 
 - [Features](#features)
