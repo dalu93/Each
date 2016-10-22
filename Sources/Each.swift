@@ -22,7 +22,7 @@ open class Each {
         
         var value: Double {
             switch self {
-            case .toMilliseconds:   return 1/60
+            case .toMilliseconds:   return 1/1000
             case .toSeconds:        return 1
             case .toMinutes:        return 60
             case .toHours:          return 3600
