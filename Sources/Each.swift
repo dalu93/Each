@@ -38,12 +38,6 @@ open class Each {
     /// the app will crash
     fileprivate var _multiplier: Double? = nil
     
-    /// The definitive time interval to use for the timer. If nil, the app will crash
-    private var _timeInterval: TimeInterval? {
-        guard let _multiplier = _multiplier else { return nil }
-        return _multiplier * _value
-    }
-    
     /// The action to perform when the timer is triggered
     fileprivate var _performClosure: VoidBoolClosure?
     
@@ -65,6 +59,12 @@ open class Each {
     
     /// Timer is stopped or not
     public var isStopped = true
+    
+    /// The definitive time interval to use for the timer. If nil, the app will crash
+    public var timeInterval: TimeInterval? {
+        guard let _multiplier = _multiplier else { return nil }
+        return _multiplier * _value
+    }
     
     // MARK: - Lifecycle
     /**
@@ -97,7 +97,7 @@ open class Each {
      */
     public func perform(closure: @escaping VoidBoolClosure) {
         guard _timer == nil else { return }
-        guard let interval = _timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
+        guard let interval = timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
         
         isStopped = false
         _performClosure = closure
