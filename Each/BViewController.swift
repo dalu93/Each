@@ -19,10 +19,10 @@ class BViewController: UIViewController {
         // 2. Define the value mesure (milliseconds, seconds, minutes, hours)
         // 3. Register the perfom closure
         // 4. Return false in the closure to continue, otherwise true to stop the timer
-        each = Each(1).seconds
+        each = Each(1).seconds()
         each!.perform {
             print("second passed")
-            return false
+            return .keep
         }
 
     }
