@@ -1,0 +1,19 @@
+PODS:
+  - Each (1.0.2):
+    - PSWeakProxy
+  - PSWeakProxy (1.0.0)
+
+DEPENDENCIES:
+  - Each (from `./`)
+
+EXTERNAL SOURCES:
+  Each:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  Each: 5a20e2583c554a6600999a51da29b467021b8c62
+  PSWeakProxy: 47594fb02ba3439aca41dde24cf3d59577e73593
+
+PODFILE CHECKSUM: ffaf1154c3a1cb42b06b81b9482f2f8a0916fa18
+
+COCOAPODS: 1.1.1

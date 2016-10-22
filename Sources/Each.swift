@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PSWeakProxy
 
 public typealias VoidBoolClosure = () -> Bool
 
@@ -73,7 +74,7 @@ open class Each {
      `hours` to get the exact configuration
      
      - parameter value: The abstract value that describes the interval together
-                        with the time unit
+     with the time unit
      
      - returns: A new `Each` uncompleted instance
      */
@@ -101,13 +102,12 @@ open class Each {
         
         isStopped = false
         _performClosure = closure
-        _timer = Timer.scheduledTimer(
-            timeInterval: interval,
-            target: self,
-            selector: .Triggered,
-            userInfo: nil,
-            repeats: true
-        )
+        _timer = Timer.scheduledTimer(timeInterval: interval,
+                                      target: PSWeakProxy(object:self),
+                                      selector: .Triggered,
+                                      userInfo: nil,
+                                      repeats: true)
+        
     }
     
     
