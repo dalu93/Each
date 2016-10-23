@@ -44,7 +44,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'Each', '~> 1.0'
+pod 'Each', '~> 1.1'
 end
 ```
 
@@ -68,8 +68,8 @@ let timer = Each(1).seconds     // Can be .milliseconds, .seconds, .minute, .hou
 timer.perform {
     // Do your operations
     // This closure has to return a Boolean value
-    // Return false if you want to leave the timer active, otherwise
-    // return true to invalidate it
+    // Return .continue if you want to leave the timer active, otherwise
+    // return .stop to invalidate it
 }
 ```
 

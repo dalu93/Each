@@ -3,7 +3,14 @@ All notable changes to this project will be documented in this file.
 `Each` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
-- `1.0.x` Releases - [1.0.0](#100)|[1.0.1](#101)
+- `1.1.x` Releases - [1.1.0](#110)
+- `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
+
+## [1.1.0](https://github.com/dalu93/Each/releases/tag/1.1.0)
+Released on yyyy-MM-dd
+
+#### Improved
+- [Perform closure return type more readable by using enum]()
 
 ## [1.0.1](https://github.com/dalu93/Each/releases/tag/1.0.1)
 Released on 2016-10-22

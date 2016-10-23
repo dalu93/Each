@@ -8,7 +8,34 @@
 
 import Foundation
 
-public typealias VoidBoolClosure = () -> Bool
+/// The perform closure. It has to return a `NextStep` type to let `Each` know
+/// what's the next operation to do.
+///
+/// Return .continue to keep the timer alive, otherwise .stop to invalidate it.
+public typealias PerformClosure = () -> NextStep
+
+// MARK: - NextStep declaration
+/// The enumeration describes the next step `Each` has to do whenever the timer
+/// is triggered.
+///
+/// - stop:       Stops the timer.
+/// - `continue`: Keeps the timer alive.
+public enum NextStep {
+    
+    case stop, `continue`
+}
+
+// MARK: - NextStep boolean value implementation
+fileprivate extension NextStep {
+    
+    /// Stops the timer or not
+    var shouldStop: Bool {
+        switch self {
+        case .continue: return false
+        case .stop:     return true
+        }
+    }
+}
 
 // MARK: - Each declaratiom
 /// The `Each` class allows the user to easily create a scheduled action
@@ -39,7 +66,7 @@ open class Each {
     fileprivate var _multiplier: Double? = nil
     
     /// The action to perform when the timer is triggered
-    fileprivate var _performClosure: VoidBoolClosure?
+    fileprivate var _performClosure: PerformClosure?
     
     /// The timer instance
     private weak var _timer: Timer?
@@ -95,7 +122,7 @@ open class Each {
      The closure should return a boolean that indicates to stop or not the timer after
      the trigger. Return `false` to continue, return `true` to stop it
      */
-    public func perform(closure: @escaping VoidBoolClosure) {
+    public func perform(closure: @escaping PerformClosure) {
         guard _timer == nil else { return }
         guard let interval = timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
         
@@ -134,7 +161,7 @@ open class Each {
 // MARK: - Actions
 fileprivate extension Each {
     @objc func _trigger(timer: Timer) {
-        let stopTimer = _performClosure?() ?? false
+        let stopTimer = _performClosure?().shouldStop ?? false
         
         guard stopTimer else { return }
         stop()
