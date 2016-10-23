@@ -22,25 +22,25 @@ class EachTimeIntervalTestCases: XCTestCase {
     }
     
     func testMillisecondInterval() {
-        let timer = Each(interval).milliseconds
+        let timer = Each(interval).milliseconds()
         
         XCTAssert(timer.timeInterval == interval / 1000, "The timeInterval should be \(interval) / 1000, but it's \(timer.timeInterval!)")
     }
     
     func testSecondsInterval() {
-        let timer = Each(interval).seconds
+        let timer = Each(interval).seconds()
         
         XCTAssert(timer.timeInterval == interval , "The timeInterval should be \(interval), but it's \(timer.timeInterval!)")
     }
     
     func testMinutesInterval() {
-        let timer = Each(interval).minutes
+        let timer = Each(interval).minutes()
         
         XCTAssert(timer.timeInterval == interval * 60, "The timeInterval should be \(interval) * 60, but it's \(timer.timeInterval!)")
     }
     
     func testHoursInterval() {
-        let timer = Each(interval).hours
+        let timer = Each(interval).hours()
         
         XCTAssert(timer.timeInterval == interval * 3600, "The timeInterval should be \(interval) * 3600, but it's \(timer.timeInterval!)")
     }

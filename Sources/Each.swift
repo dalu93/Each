@@ -7,14 +7,49 @@
 //
 
 import Foundation
+import PSWeakProxy
 
-public typealias VoidBoolClosure = () -> Bool
+public typealias Callback = () -> NextStep
 
+public enum NextStep {
+    case keep
+    case stop
+}
+
+protocol API {}
 // MARK: - Each declaratiom
 /// The `Each` class allows the user to easily create a scheduled action
+
+extension Each: API {
+    /// make sure it runs the specific interval in milliseconds
+    func milliseconds() -> Self {
+        return _confirm(unit: .toMilliseconds)
+    }
+    
+    /// make sure it runs the specific interval in milliseconds
+    func seconds() -> Self {
+        return _confirm(unit: .toSeconds)
+    }
+    
+    /// make sure it runs the specific interval in milliseconds
+    func minutes() -> Self {
+        return _confirm(unit: .toMinutes)
+    }
+    
+    /// make sure it runs the specific interval in milliseconds
+    func hours() -> Self {
+        return _confirm(unit: .toHours)
+    }
+    
+}
+
 open class Each {
     
-    enum SecondsMultiplierType {
+    //MARK: - Public APIs
+    /// Timer is stopped or not
+    public private(set) var isStopped = true
+    
+    fileprivate enum SecondsMultiplierType {
         case toMilliseconds
         case toSeconds
         case toMinutes
@@ -39,26 +74,11 @@ open class Each {
     fileprivate var _multiplier: Double? = nil
     
     /// The action to perform when the timer is triggered
-    fileprivate var _performClosure: VoidBoolClosure?
+    fileprivate var _performClosure: Callback?
     
     /// The timer instance
     private weak var _timer: Timer?
     
-    // MARK: - Public properties
-    /// Instance that runs the specific interval in milliseconds
-    lazy var milliseconds:  Each = self._makeEachWith(value: self._value, multiplierType: .toMilliseconds)
-    
-    /// Instance that runs the specific interval in seconds
-    lazy var seconds:       Each = self._makeEachWith(value: self._value, multiplierType: .toSeconds)
-    
-    /// /// Instance that runs the specific interval in minutes
-    lazy var minutes:       Each = self._makeEachWith(value: self._value, multiplierType: .toMinutes)
-    
-    /// Instance that runs the specific interval in hours
-    lazy var hours:         Each = self._makeEachWith(value: self._value, multiplierType: .toHours)
-    
-    /// Timer is stopped or not
-    public var isStopped = true
     
     /// The definitive time interval to use for the timer. If nil, the app will crash
     public var timeInterval: TimeInterval? {
@@ -73,7 +93,7 @@ open class Each {
      `hours` to get the exact configuration
      
      - parameter value: The abstract value that describes the interval together
-                        with the time unit
+     with the time unit
      
      - returns: A new `Each` uncompleted instance
      */
@@ -95,19 +115,18 @@ open class Each {
      The closure should return a boolean that indicates to stop or not the timer after
      the trigger. Return `false` to continue, return `true` to stop it
      */
-    public func perform(closure: @escaping VoidBoolClosure) {
+    public func perform(closure: @escaping Callback) {
         guard _timer == nil else { return }
         guard let interval = timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
         
         isStopped = false
         _performClosure = closure
-        _timer = Timer.scheduledTimer(
-            timeInterval: interval,
-            target: self,
-            selector: .Triggered,
-            userInfo: nil,
-            repeats: true
-        )
+        _timer = Timer.scheduledTimer(timeInterval: interval,
+                                      target: PSWeakProxy(object:self),
+                                      selector: .Triggered,
+                                      userInfo: nil,
+                                      repeats: true)
+        
     }
     
     
@@ -134,20 +153,19 @@ open class Each {
 // MARK: - Actions
 fileprivate extension Each {
     @objc func _trigger(timer: Timer) {
-        let stopTimer = _performClosure?() ?? false
-        
-        guard stopTimer else { return }
-        stop()
+        guard let callback = _performClosure else { return }
+        switch callback() {
+        case .keep: break
+        case .stop: stop()
+        }
     }
 }
 
 // MARK: - Builders
 private extension Each {
-    func _makeEachWith(value: TimeInterval, multiplierType: SecondsMultiplierType) -> Each {
-        let each = Each(value)
-        each._multiplier = multiplierType.value
-        
-        return each
+    func _confirm(unit: SecondsMultiplierType) -> Self {
+        _multiplier = unit.value
+        return self
     }
 }
 

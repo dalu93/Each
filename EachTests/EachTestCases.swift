@@ -22,11 +22,12 @@ class EachTestCases: XCTestCase {
     func testEachSimple() {
         let exp = expectation(description: "Timer waiting")
         
-        _ = Each(1).seconds.perform {
+        let timer = Each(1).seconds()
+        timer.perform {
             exp.fulfill()
-            return false
+            return .stop
         }
-        
+
         waitForExpectations(timeout: 1.1) { error in
             
             guard let error = error else { return }
@@ -37,10 +38,10 @@ class EachTestCases: XCTestCase {
     func testEachStopInClosure() {
         let exp = expectation(description: "Timer waiting")
         
-        let timer = Each(1).seconds
+        let timer = Each(1).seconds()
         timer.perform() {
             exp.fulfill()
-            return true
+            return .stop
         }
         
         waitForExpectations(timeout: 1.1) { error in
@@ -57,10 +58,10 @@ class EachTestCases: XCTestCase {
     func testEachStopAndStartAgain() {
         let exp = expectation(description: "Timer waiting")
         
-        let timer = Each(1).seconds
+        let timer = Each(1).seconds()
         timer.perform() {
             exp.fulfill()
-            return true
+            return .stop
         }
         
         timer.stop()
