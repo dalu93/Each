@@ -24,7 +24,7 @@ class EachTestCases: XCTestCase {
         
         _ = Each(1).seconds.perform {
             exp.fulfill()
-            return false
+            return .stop
         }
         
         waitForExpectations(timeout: 1.1) { error in
@@ -40,12 +40,12 @@ class EachTestCases: XCTestCase {
         let timer = Each(1).seconds
         timer.perform() {
             exp.fulfill()
-            return true
+            return .stop
         }
         
         waitForExpectations(timeout: 1.1) { error in
             guard timer.isStopped else {
-                XCTFail("The timer is not stopped even if the closure returns true")
+                XCTFail("The timer is not stopped even if the closure returns .stop")
                 return
             }
             
@@ -60,7 +60,7 @@ class EachTestCases: XCTestCase {
         let timer = Each(1).seconds
         timer.perform() {
             exp.fulfill()
-            return true
+            return .stop
         }
         
         timer.stop()
