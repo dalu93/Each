@@ -10,13 +10,13 @@ All notable changes to this project will be documented in this file.
 Released on yyyy-MM-dd
 
 #### Improved
-- [Perform closure return type more readable by using enum]()
+- [Perform closure return type more readable by using enum](https://github.com/dalu93/Each/pull/7) by [Luca D'Alberti](https://github.com/dalu93)
 
 ## [1.0.1](https://github.com/dalu93/Each/releases/tag/1.0.1)
 Released on 2016-10-22
 
 #### Fixed
-- [Use the correct value for the milliseconds multiplier](https://github.com/dalu93/Each/pull/3)
+- [Use the correct value for the milliseconds multiplier](https://github.com/dalu93/Each/pull/3) by [Sam Jones](https://github.com/sjoness)
 
 ## [1.0.0](https://github.com/dalu93/Each/releases/tag/1.0.0)
 Released on 2016-10-14.
