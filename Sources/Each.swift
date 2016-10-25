@@ -73,16 +73,16 @@ open class Each {
     
     // MARK: - Public properties
     /// Instance that runs the specific interval in milliseconds
-    lazy var milliseconds:  Each = self._makeEachWith(value: self._value, multiplierType: .toMilliseconds)
+    public lazy var milliseconds:  Each = self._makeEachWith(value: self._value, multiplierType: .toMilliseconds)
     
     /// Instance that runs the specific interval in seconds
-    lazy var seconds:       Each = self._makeEachWith(value: self._value, multiplierType: .toSeconds)
+    public lazy var seconds:       Each = self._makeEachWith(value: self._value, multiplierType: .toSeconds)
     
     /// /// Instance that runs the specific interval in minutes
-    lazy var minutes:       Each = self._makeEachWith(value: self._value, multiplierType: .toMinutes)
+    public lazy var minutes:       Each = self._makeEachWith(value: self._value, multiplierType: .toMinutes)
     
     /// Instance that runs the specific interval in hours
-    lazy var hours:         Each = self._makeEachWith(value: self._value, multiplierType: .toHours)
+    public lazy var hours:         Each = self._makeEachWith(value: self._value, multiplierType: .toHours)
     
     /// Timer is stopped or not
     public var isStopped = true
@@ -169,7 +169,7 @@ fileprivate extension Each {
 }
 
 // MARK: - Builders
-private extension Each {
+fileprivate extension Each {
     func _makeEachWith(value: TimeInterval, multiplierType: SecondsMultiplierType) -> Each {
         let each = Each(value)
         each._multiplier = multiplierType.value
@@ -179,6 +179,6 @@ private extension Each {
 }
 
 // MARK: - Selectors
-private extension Selector {
+fileprivate extension Selector {
     static let Triggered = #selector(Each._trigger(timer:))
 }
