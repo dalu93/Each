@@ -9,6 +9,7 @@ Each is a NSTimer bridge library written in Swift.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Leaks](#leaks)
 - [License](#license)
 
 ## Features
@@ -86,6 +87,46 @@ perform closure.
 
 ```swift
 timer.restart()
+```
+
+## Leaks
+Unfortunately the interface doesn't help you with handling the memory leaks the timer
+could create. In case of them, two workarounds are provided
+
+## Workaround 1
+
+In case you don't want to declare a property that holds the `Each` reference, create a normal `Each` timer in your method scope and return `.stop/true` whenever the `owner` instance is `nil`
+
+```swift
+Each(1).seconds.perform { [weak self] in
+    guard let _ = self else { return .stop }
+
+    print("timer called")
+    return .continue
+}
+```
+
+90% of closures will call `self` somehow, so this isn't so bad
+
+## Workaround 2
+
+In case the first workaround wasn't enough, you can declare a property that holds the `Each` reference and call the `stop()` function whenever the `owner` is deallocated
+
+```swift
+final class ViewController: UIViewController {
+    private let _timer = Each(1).seconds
+
+    deinit {
+        _timer.stop()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        _timer.perform {
+            // do something and return. you can check here if the `self` instance is nil as for workaround #1
+        }
+    }
+}
 ```
 
 ## License
