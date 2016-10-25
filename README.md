@@ -93,7 +93,7 @@ timer.restart()
 Unfortunately the interface doesn't help you with handling the memory leaks the timer
 could create. In case of them, two workarounds are provided
 
-## Workaround 1
+### Workaround 1
 
 In case you don't want to declare a property that holds the `Each` reference, create a normal `Each` timer in your method scope and return `.stop/true` whenever the `owner` instance is `nil`
 
@@ -108,7 +108,7 @@ Each(1).seconds.perform { [weak self] in
 
 90% of closures will call `self` somehow, so this isn't so bad
 
-## Workaround 2
+### Workaround 2
 
 In case the first workaround wasn't enough, you can declare a property that holds the `Each` reference and call the `stop()` function whenever the `owner` is deallocated
 
