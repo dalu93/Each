@@ -137,7 +137,7 @@ open class Each {
      */
     public func perform(closure: @escaping PerformClosure) {
         guard _timer == nil else { return }
-        guard let interval = timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties") }
+        guard let interval = timeInterval else { fatalError("Please, speficy the time unit by using `milliseconds`, `seconds`, `minutes` abd `hours` properties.") }
         
         isStopped = false
         _performClosure = closure
@@ -170,7 +170,7 @@ open class Each {
      Restarts the timer
      */
     public func restart() {
-        guard let _performClosure = _performClosure else { fatalError("Don't call the method `start()` in this case. The first time the timer is started automatically") }
+        guard let _performClosure = _performClosure else { fatalError("Don't call the method `start()` without stopping it before.") }
         
         _ = perform(closure: _performClosure)
     }
