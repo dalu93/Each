@@ -71,6 +71,19 @@ open class Each {
     /// The timer instance
     private weak var _timer: Timer?
     
+    /// Weak reference to the owner. Useful to check whether to stop or not the timer
+    /// when the owner is deallocated
+    fileprivate weak var _owner: AnyObject? {
+        didSet {
+            _checkOwner = _owner != nil
+        }
+    }
+    
+    /// It contains a boolean property that tells how to handle the tier trigger, checking or not for the
+    /// owner instance.
+    /// - Note: Do not change this value. The `_owner.didSet` will handle it
+    fileprivate var _checkOwner = false
+    
     // MARK: - Public properties
     /// Instance that runs the specific interval in milliseconds
     public lazy var milliseconds:  Each = self._makeEachWith(value: self._value, multiplierType: .toMilliseconds)
@@ -137,6 +150,11 @@ open class Each {
         )
     }
     
+    public func perform(on owner: AnyObject, closure: @escaping PerformClosure) {
+        _owner = owner
+        perform(closure: closure)
+    }
+    
     
     /**
      Stops the timer
@@ -161,6 +179,11 @@ open class Each {
 // MARK: - Actions
 fileprivate extension Each {
     @objc func _trigger(timer: Timer) {
+        if _checkOwner && _owner == nil {
+            stop()
+            return
+        }
+        
         let stopTimer = _performClosure?().shouldStop ?? false
         
         guard stopTimer else { return }
