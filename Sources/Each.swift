@@ -85,7 +85,7 @@ open class Each {
     public lazy var hours:         Each = self._makeEachWith(value: self._value, multiplierType: .toHours)
     
     /// Timer is stopped or not
-    public var isStopped = true
+    public private(set) var isStopped = true
     
     /// The definitive time interval to use for the timer. If nil, the app will crash
     public var timeInterval: TimeInterval? {
