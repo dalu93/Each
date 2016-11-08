@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8FE10F1DD1E65C006078B0"
-               BuildableName = "EachKit.framework"
-               BlueprintName = "EachKit"
+               BlueprintIdentifier = "81A194431DB0C3A100985EC0"
+               BuildableName = "EachApp.app"
+               BlueprintName = "EachApp"
                ReferencedContainer = "container:Each.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F8FE1171DD1E65C006078B0"
-               BuildableName = "Each-iOSTests.xctest"
-               BlueprintName = "Each-iOSTests"
+               BlueprintIdentifier = "81A194571DB0C3A200985EC0"
+               BuildableName = "EachTests.xctest"
+               BlueprintName = "EachTests"
                ReferencedContainer = "container:Each.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8FE10F1DD1E65C006078B0"
-            BuildableName = "EachKit.framework"
-            BlueprintName = "EachKit"
+            BlueprintIdentifier = "81A194431DB0C3A100985EC0"
+            BuildableName = "EachApp.app"
+            BlueprintName = "EachApp"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8FE10F1DD1E65C006078B0"
-            BuildableName = "EachKit.framework"
-            BlueprintName = "EachKit"
+            BlueprintIdentifier = "81A194431DB0C3A100985EC0"
+            BuildableName = "EachApp.app"
+            BlueprintName = "EachApp"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F8FE10F1DD1E65C006078B0"
-            BuildableName = "EachKit.framework"
-            BlueprintName = "EachKit"
+            BlueprintIdentifier = "81A194431DB0C3A100985EC0"
+            BuildableName = "EachApp.app"
+            BlueprintName = "EachApp"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
