@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F8FE1201DD1E65C006078B0 /* Each-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F8FE1121DD1E65C006078B0 /* Each-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F8FE1271DD1E66A006078B0 /* Each.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A194681DB0C3EC00985EC0 /* Each.swift */; };
 		817D34741DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */; };
 		81A194481DB0C3A100985EC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A194471DB0C3A100985EC0 /* AppDelegate.swift */; };
 		81A1944A1DB0C3A100985EC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A194491DB0C3A100985EC0 /* ViewController.swift */; };
@@ -28,8 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F8FE1101DD1E65C006078B0 /* Each.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Each.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8FE1121DD1E65C006078B0 /* Each-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Each-iOS.h"; sourceTree = "<group>"; };
+		1F8FE1131DD1E65C006078B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachTimeIntervalTestCases.swift; sourceTree = "<group>"; };
-		81A194441DB0C3A100985EC0 /* Each.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Each.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A194441DB0C3A100985EC0 /* EachApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EachApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A194471DB0C3A100985EC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A194491DB0C3A100985EC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81A1944C1DB0C3A100985EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F8FE10C1DD1E65C006078B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A194411DB0C3A100985EC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F8FE1111DD1E65C006078B0 /* Each */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FE1121DD1E65C006078B0 /* Each-iOS.h */,
+				1F8FE1131DD1E65C006078B0 /* Info.plist */,
+			);
+			path = Each;
+			sourceTree = "<group>";
+		};
 		81A1943B1DB0C3A100985EC0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,8 +93,9 @@
 				81C8F8101DB0C62F009FE6D3 /* CHANGELOG.md */,
 				81C8F80E1DB0C61E009FE6D3 /* README.md */,
 				81A194671DB0C3E100985EC0 /* Sources */,
-				81A194461DB0C3A100985EC0 /* Each */,
-				81A1945B1DB0C3A200985EC0 /* EachTests */,
+				81A194461DB0C3A100985EC0 /* EachApp */,
+				81A1945B1DB0C3A200985EC0 /* EachAppTests */,
+				1F8FE1111DD1E65C006078B0 /* Each */,
 				81A194451DB0C3A100985EC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,13 +103,14 @@
 		81A194451DB0C3A100985EC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81A194441DB0C3A100985EC0 /* Each.app */,
+				81A194441DB0C3A100985EC0 /* EachApp.app */,
 				81A194581DB0C3A200985EC0 /* EachTests.xctest */,
+				1F8FE1101DD1E65C006078B0 /* Each.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81A194461DB0C3A100985EC0 /* Each */ = {
+		81A194461DB0C3A100985EC0 /* EachApp */ = {
 			isa = PBXGroup;
 			children = (
 				81A194471DB0C3A100985EC0 /* AppDelegate.swift */,
@@ -97,17 +120,17 @@
 				81A194501DB0C3A100985EC0 /* LaunchScreen.storyboard */,
 				81A194531DB0C3A100985EC0 /* Info.plist */,
 			);
-			path = Each;
+			path = EachApp;
 			sourceTree = "<group>";
 		};
-		81A1945B1DB0C3A200985EC0 /* EachTests */ = {
+		81A1945B1DB0C3A200985EC0 /* EachAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				81C8F80C1DB0C487009FE6D3 /* EachTestCases.swift */,
 				817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */,
 				81A1945E1DB0C3A200985EC0 /* Info.plist */,
 			);
-			path = EachTests;
+			path = EachAppTests;
 			sourceTree = "<group>";
 		};
 		81A194671DB0C3E100985EC0 /* Sources */ = {
@@ -120,10 +143,39 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1F8FE10D1DD1E65C006078B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F8FE1201DD1E65C006078B0 /* Each-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		81A194431DB0C3A100985EC0 /* Each */ = {
+		1F8FE10F1DD1E65C006078B0 /* Each */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81A194611DB0C3A200985EC0 /* Build configuration list for PBXNativeTarget "Each" */;
+			buildConfigurationList = 1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "Each" */;
+			buildPhases = (
+				1F8FE10B1DD1E65C006078B0 /* Sources */,
+				1F8FE10C1DD1E65C006078B0 /* Frameworks */,
+				1F8FE10D1DD1E65C006078B0 /* Headers */,
+				1F8FE10E1DD1E65C006078B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Each;
+			productName = "Each-iOS";
+			productReference = 1F8FE1101DD1E65C006078B0 /* Each.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81A194431DB0C3A100985EC0 /* EachApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A194611DB0C3A200985EC0 /* Build configuration list for PBXNativeTarget "EachApp" */;
 			buildPhases = (
 				81A194401DB0C3A100985EC0 /* Sources */,
 				81A194411DB0C3A100985EC0 /* Frameworks */,
@@ -133,9 +185,9 @@
 			);
 			dependencies = (
 			);
-			name = Each;
+			name = EachApp;
 			productName = Each;
-			productReference = 81A194441DB0C3A100985EC0 /* Each.app */;
+			productReference = 81A194441DB0C3A100985EC0 /* EachApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		81A194571DB0C3A200985EC0 /* EachTests */ = {
@@ -162,10 +214,14 @@
 		81A1943C1DB0C3A100985EC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = dalu93;
 				TargetAttributes = {
+					1F8FE10F1DD1E65C006078B0 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					81A194431DB0C3A100985EC0 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -190,13 +246,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81A194431DB0C3A100985EC0 /* Each */,
+				81A194431DB0C3A100985EC0 /* EachApp */,
 				81A194571DB0C3A200985EC0 /* EachTests */,
+				1F8FE10F1DD1E65C006078B0 /* Each */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F8FE10E1DD1E65C006078B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A194421DB0C3A100985EC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +281,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F8FE10B1DD1E65C006078B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F8FE1271DD1E66A006078B0 /* Each.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81A194401DB0C3A100985EC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		81A1945A1DB0C3A200985EC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81A194431DB0C3A100985EC0 /* Each */;
+			target = 81A194431DB0C3A100985EC0 /* EachApp */;
 			targetProxy = 81A194591DB0C3A200985EC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -266,6 +338,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F8FE1211DD1E65C006078B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Each/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F8FE1221DD1E65C006078B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Each/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		81A1945F1DB0C3A200985EC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -365,7 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Each/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -377,7 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Each/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,6 +530,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "Each" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F8FE1211DD1E65C006078B0 /* Debug */,
+				1F8FE1221DD1E65C006078B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		81A1943F1DB0C3A100985EC0 /* Build configuration list for PBXProject "Each" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -423,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81A194611DB0C3A200985EC0 /* Build configuration list for PBXNativeTarget "Each" */ = {
+		81A194611DB0C3A200985EC0 /* Build configuration list for PBXNativeTarget "EachApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81A194621DB0C3A200985EC0 /* Debug */,
