@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F8FE1101DD1E65C006078B0 /* Each.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Each.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8FE1101DD1E65C006078B0 /* EachKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EachKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8FE1121DD1E65C006078B0 /* Each-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Each-iOS.h"; sourceTree = "<group>"; };
 		1F8FE1131DD1E65C006078B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachTimeIntervalTestCases.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				81A194441DB0C3A100985EC0 /* EachApp.app */,
 				81A194581DB0C3A200985EC0 /* EachTests.xctest */,
-				1F8FE1101DD1E65C006078B0 /* Each.framework */,
+				1F8FE1101DD1E65C006078B0 /* EachKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,9 +155,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1F8FE10F1DD1E65C006078B0 /* Each */ = {
+		1F8FE10F1DD1E65C006078B0 /* EachKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "Each" */;
+			buildConfigurationList = 1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "EachKit" */;
 			buildPhases = (
 				1F8FE10B1DD1E65C006078B0 /* Sources */,
 				1F8FE10C1DD1E65C006078B0 /* Frameworks */,
@@ -168,9 +168,9 @@
 			);
 			dependencies = (
 			);
-			name = Each;
+			name = EachKit;
 			productName = "Each-iOS";
-			productReference = 1F8FE1101DD1E65C006078B0 /* Each.framework */;
+			productReference = 1F8FE1101DD1E65C006078B0 /* EachKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		81A194431DB0C3A100985EC0 /* EachApp */ = {
@@ -248,7 +248,7 @@
 			targets = (
 				81A194431DB0C3A100985EC0 /* EachApp */,
 				81A194571DB0C3A200985EC0 /* EachTests */,
-				1F8FE10F1DD1E65C006078B0 /* Each */,
+				1F8FE10F1DD1E65C006078B0 /* EachKit */,
 			);
 		};
 /* End PBXProject section */
@@ -351,7 +351,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -373,7 +373,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.Each;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -530,7 +530,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "Each" */ = {
+		1F8FE1251DD1E65C006078B0 /* Build configuration list for PBXNativeTarget "EachKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F8FE1211DD1E65C006078B0 /* Debug */,
