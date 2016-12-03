@@ -55,6 +55,14 @@ Then, run the following command:
 $ pod install
 ```
 
+### Carthage
+
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `Each` by adding it to your `Cartfile`:
+
+```
+github "dalu93/Each"
+```
+
 ## Usage
 
 ### Creating a new timer instance
