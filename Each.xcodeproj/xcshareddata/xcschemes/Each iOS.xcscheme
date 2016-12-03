@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F41C4261DF372A90076BB6B"
-               BuildableName = "Each.framework"
-               BlueprintName = "Each"
+               BuildableName = "Each iOS.framework"
+               BlueprintName = "Each iOS"
                ReferencedContainer = "container:Each.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F41C4261DF372A90076BB6B"
-            BuildableName = "Each.framework"
-            BlueprintName = "Each"
+            BuildableName = "Each iOS.framework"
+            BlueprintName = "Each iOS"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F41C4261DF372A90076BB6B"
-            BuildableName = "Each.framework"
-            BlueprintName = "Each"
+            BuildableName = "Each iOS.framework"
+            BlueprintName = "Each iOS"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,8 +84,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F41C4261DF372A90076BB6B"
-            BuildableName = "Each.framework"
-            BlueprintName = "Each"
+            BuildableName = "Each iOS.framework"
+            BlueprintName = "Each iOS"
             ReferencedContainer = "container:Each.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
