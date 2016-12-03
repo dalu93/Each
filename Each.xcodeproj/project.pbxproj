@@ -11,7 +11,6 @@
 		0F41C41D1DF372740076BB6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F41C4151DF372740076BB6B /* Assets.xcassets */; };
 		0F41C41E1DF372740076BB6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F41C4161DF372740076BB6B /* LaunchScreen.storyboard */; };
 		0F41C41F1DF372740076BB6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F41C4181DF372740076BB6B /* Main.storyboard */; };
-		0F41C4201DF372740076BB6B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F41C41A1DF372740076BB6B /* Info.plist */; };
 		0F41C4211DF372740076BB6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41C41B1DF372740076BB6B /* ViewController.swift */; };
 		0F41C42E1DF372A90076BB6B /* Each.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F41C4271DF372A90076BB6B /* Each.framework */; };
 		0F41C42F1DF372A90076BB6B /* Each.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0F41C4271DF372A90076BB6B /* Each.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -233,7 +232,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = dalu93;
 				TargetAttributes = {
 					0F41C4261DF372A90076BB6B = {
@@ -283,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F41C4201DF372740076BB6B /* Info.plist in Resources */,
 				0F41C41F1DF372740076BB6B /* Main.storyboard in Resources */,
 				0F41C41D1DF372740076BB6B /* Assets.xcassets in Resources */,
 				0F41C41E1DF372740076BB6B /* LaunchScreen.storyboard in Resources */,
@@ -423,6 +421,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -473,6 +472,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -562,6 +562,7 @@
 				0F41C4321DF372A90076BB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A1943F1DB0C3A100985EC0 /* Build configuration list for PBXProject "Each" */ = {
 			isa = XCConfigurationList;
