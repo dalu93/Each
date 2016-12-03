@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-//! Project version number for deleteme.
-FOUNDATION_EXPORT double deletemeVersionNumber;
+//! Project version number for Each.
+FOUNDATION_EXPORT double EachVersionNumber;
 
-//! Project version string for deleteme.
-FOUNDATION_EXPORT const unsigned char deletemeVersionString[];
+//! Project version string for Each.
+FOUNDATION_EXPORT const unsigned char EachVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <deleteme/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <Each/PublicHeader.h>
