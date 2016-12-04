@@ -76,7 +76,19 @@ let timer = Each(1).seconds     // Can be .milliseconds, .seconds, .minute, .hou
 ```swift
 timer.perform {
     // Do your operations
-    // This closure has to return a Boolean value
+    // This closure has to return a NextStep value
+    // Return .continue if you want to leave the timer active, otherwise
+    // return .stop to invalidate it
+}
+```
+
+If you want to leave the memory management decision to the `Each` class, you can simply use the `perform(on: _)` method. 
+It requires that the parameter is an `AnyObject` instance.
+
+```swift
+timer.perform(on: self) {
+    // Do your operations
+    // This closure has to return a NextStep value
     // Return .continue if you want to leave the timer active, otherwise
     // return .stop to invalidate it
 }
@@ -103,6 +115,12 @@ could create. In case of them, two workarounds are provided
 
 ### Workaround 1
 
+Use the `perform(on: _)` method as explained in the [usage](#usage) section.
+Please note that using this method, the `timer` isn't immediately deallocated when the `owner` is deallocated.
+It will be deallocated when the `timer` triggers the next time and it will check whether the `owner` instance is still valid or not.
+
+### Workaround 2
+
 In case you don't want to declare a property that holds the `Each` reference, create a normal `Each` timer in your method scope and return `.stop/true` whenever the `owner` instance is `nil`
 
 ```swift
@@ -116,7 +134,7 @@ Each(1).seconds.perform { [weak self] in
 
 90% of closures will call `self` somehow, so this isn't so bad
 
-### Workaround 2
+### Workaround 3
 
 In case the first workaround wasn't enough, you can declare a property that holds the `Each` reference and call the `stop()` function whenever the `owner` is deallocated
 

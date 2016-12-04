@@ -10,7 +10,6 @@ import UIKit
 import Each
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,4 +27,3 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
