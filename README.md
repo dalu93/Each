@@ -35,7 +35,7 @@ Each is a NSTimer bridge library written in Swift.
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build Each 1.0.0+.
+> CocoaPods 1.1.0+ is required to build Each.
 
 To integrate Each into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -45,7 +45,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-pod 'Each', '~> 1.1'
+pod 'Each', '~> 1.2'
 end
 ```
 

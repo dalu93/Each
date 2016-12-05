@@ -3,8 +3,15 @@ All notable changes to this project will be documented in this file.
 `Each` adheres to [Semantic Versioning](http://semver.org/).
 
 #### 1.x Releases
+- `1.2.x` Releases - [1.2.0](#120)
 - `1.1.x` Releases - [1.1.0](#110) | [1.1.1](#111)
 - `1.0.x` Releases - [1.0.0](#100) | [1.0.1](#101)
+
+## [1.2.0](https://github.com/dalu93/Each/releases/tag/1.2.0)
+Release on 2016-12-05
+
+#### Added
+- Carthage compatibility [#12](https://github.com/dalu93/Each/pull/12) by [stupergenius](https://github.com/stupergenius)
 
 ## [1.1.1](https://github.com/dalu93/Each/releases/tag/1.1.1)
 Release on 2016-10-31
