@@ -23,6 +23,10 @@
 		0F41C47A1DF37BC20076BB6B /* Each.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F41C43A1DF373B40076BB6B /* Each.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F41C47B1DF37BC20076BB6B /* Each.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F41C43A1DF373B40076BB6B /* Each.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F41C4981DF37D2D0076BB6B /* Each-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F41C4971DF37D2D0076BB6B /* Each-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49B261011FB6FDAC002AEC8E /* EachDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B261001FB6FDAC002AEC8E /* EachDisposer.swift */; };
+		49B261021FB6FDAC002AEC8E /* EachDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B261001FB6FDAC002AEC8E /* EachDisposer.swift */; };
+		49B261031FB6FDAC002AEC8E /* EachDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B261001FB6FDAC002AEC8E /* EachDisposer.swift */; };
+		49B261041FB6FDAC002AEC8E /* EachDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B261001FB6FDAC002AEC8E /* EachDisposer.swift */; };
 		817D34741DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */; };
 		81C8F80D1DB0C487009FE6D3 /* EachTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C8F80C1DB0C487009FE6D3 /* EachTestCases.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +79,7 @@
 		0F41C46D1DF379C70076BB6B /* Each.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Each.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F41C4751DF379FF0076BB6B /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-macOS.plist"; path = "Sources/Info-macOS.plist"; sourceTree = "<group>"; };
 		0F41C4971DF37D2D0076BB6B /* Each-macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Each-macOS.h"; path = "Sources/Each-macOS.h"; sourceTree = "<group>"; };
+		49B261001FB6FDAC002AEC8E /* EachDisposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EachDisposer.swift; path = Sources/EachDisposer.swift; sourceTree = "<group>"; };
 		817D34731DBB6A4A0059E633 /* EachTimeIntervalTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachTimeIntervalTestCases.swift; sourceTree = "<group>"; };
 		81A194441DB0C3A100985EC0 /* Each Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Each Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A194581DB0C3A200985EC0 /* EachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				81A194681DB0C3EC00985EC0 /* Each.swift */,
+				49B261001FB6FDAC002AEC8E /* EachDisposer.swift */,
 				0F41C43A1DF373B40076BB6B /* Each.h */,
 				0F41C4971DF37D2D0076BB6B /* Each-macOS.h */,
 				0F41C4651DF379600076BB6B /* Info-iOS.plist */,
@@ -460,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F41C4341DF373470076BB6B /* Each.swift in Sources */,
+				49B261011FB6FDAC002AEC8E /* EachDisposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F41C4771DF37AEF0076BB6B /* Each.swift in Sources */,
+				49B261031FB6FDAC002AEC8E /* EachDisposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F41C4761DF37AEE0076BB6B /* Each.swift in Sources */,
+				49B261021FB6FDAC002AEC8E /* EachDisposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F41C4781DF37AEF0076BB6B /* Each.swift in Sources */,
+				49B261041FB6FDAC002AEC8E /* EachDisposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dalu93.Each-iOS";
 				PRODUCT_NAME = Each;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -580,7 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dalu93.Each-iOS";
 				PRODUCT_NAME = Each;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -603,7 +613,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -628,7 +638,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -653,7 +663,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -678,7 +688,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -706,7 +716,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -732,7 +742,7 @@
 				PRODUCT_NAME = Each;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -842,7 +852,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -855,7 +865,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -868,7 +878,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -881,7 +891,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalu93.EachTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -904,6 +914,7 @@
 				0F41C4571DF378400076BB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F41C4621DF378E00076BB6B /* Build configuration list for PBXNativeTarget "Each tvOS" */ = {
 			isa = XCConfigurationList;
@@ -912,6 +923,7 @@
 				0F41C4641DF378E00076BB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F41C4721DF379C70076BB6B /* Build configuration list for PBXNativeTarget "Each macOS" */ = {
 			isa = XCConfigurationList;
@@ -920,6 +932,7 @@
 				0F41C4741DF379C70076BB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A1943F1DB0C3A100985EC0 /* Build configuration list for PBXProject "Each" */ = {
 			isa = XCConfigurationList;
