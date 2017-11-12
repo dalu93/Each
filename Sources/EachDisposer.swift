@@ -8,38 +8,32 @@
 
 import Foundation
 
-// MARK: - Disposable declaration
-public protocol Disposable {
-    func dispose()
-}
-
-// MARK: - Disposable
-extension Each: Disposable {
-    public func dispose() {
-        stop()
-    }
-}
-
-// MARK: - Disposer declaration
-public protocol Disposer {
-    func add(_ disposable: Disposable)
-    func dispose()
-}
-
 // MARK: - EachDisposer declaration
-open class EachDisposer: Disposer {
+/// `EachDisposer` can dispose a set of `Each` objects.
+///
+/// The main feature of this object is that it provides an automatic disposition
+/// of every `Each` instance when the disposer is deinitialized
+open class EachDisposer {
 
-    private var _disposables: [Disposable] = []
+    /// List of `Each`s added to the `Disposer`
+    private(set) var timers: [Each] = []
 
     public init() {}
 
-    public func add(_ disposable: Disposable) {
-        _disposables.append(disposable)
+    /// Add the `Each` instance as `Disposable`
+    ///
+    /// The `Each` instance is retained and it will be deinitialized and stopped
+    /// together with the `EachDisposer` instance
+    ///
+    /// - Parameter disposable: The `Each` instance
+    public func add(_ disposable: Each) {
+        timers.append(disposable)
     }
 
+    /// Forces the dispose of all the `Each`s added
     public func dispose() {
-        _disposables.forEach { $0.dispose() }
-        _disposables = []
+        timers.forEach { $0.stop() }
+        timers = []
     }
 
     deinit {
