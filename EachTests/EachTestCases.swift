@@ -53,6 +53,21 @@ class EachTestCases: XCTestCase {
             print(error)
         }
     }
+
+    func testEachStop() {
+        // GIVEN
+        let timer = Each(2).seconds
+        timer.perform {
+            // do something
+            return .continue
+        }
+
+        // WHEN
+        timer.stop()
+
+        // THEN
+        XCTAssertTrue(timer.isStopped == true)
+    }
     
     func testEachStopAndStartAgain() {
         let exp = expectation(description: "Timer waiting")
