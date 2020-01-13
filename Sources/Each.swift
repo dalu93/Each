@@ -141,13 +141,16 @@ open class Each {
         
         isStopped = false
         _performClosure = closure
-        _timer = Timer.scheduledTimer(
+        let timer = Timer(
             timeInterval: interval,
             target: self,
             selector: .triggered,
             userInfo: nil,
             repeats: true
         )
+      
+        RunLoop.main.add(timer, forMode: .common)
+        _timer = timer
     }
     
     public func perform(on owner: AnyObject, closure: @escaping PerformClosure) {
