@@ -144,7 +144,7 @@ open class Each {
         _timer = Timer.scheduledTimer(
             timeInterval: interval,
             target: self,
-            selector: .Triggered,
+            selector: .triggered,
             userInfo: nil,
             repeats: true
         )
@@ -203,5 +203,5 @@ fileprivate extension Each {
 
 // MARK: - Selectors
 fileprivate extension Selector {
-    static let Triggered = #selector(Each._trigger(timer:))
+    static let triggered = #selector(Each._trigger(timer:))
 }
