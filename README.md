@@ -3,7 +3,7 @@ Elegant ⏱ interface for Swift apps
 
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5805caae4b74d00100717ec7&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5805caae4b74d00100717ec7/build/latest)
 
-Each is a NSTimer bridge library written in Swift.
+Each is a Timer bridge library written in Swift.
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -22,8 +22,8 @@ Each is a NSTimer bridge library written in Swift.
 ## Requirements
 
 - iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 11.0+
+- Swift 5.0+
 
 ## Installation
 

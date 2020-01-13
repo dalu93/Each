@@ -141,11 +141,14 @@ open class Each {
         
         isStopped = false
         _performClosure = closure
-        let timer = Timer(timeInterval: interval,
-                          target: self,
-                          selector: .Triggered,
-                          userInfo: nil,
-                          repeats: true)
+        let timer = Timer(
+            timeInterval: interval,
+            target: self,
+            selector: .triggered,
+            userInfo: nil,
+            repeats: true
+        )
+      
         RunLoop.main.add(timer, forMode: .common)
         _timer = timer
     }
@@ -203,5 +206,5 @@ fileprivate extension Each {
 
 // MARK: - Selectors
 fileprivate extension Selector {
-    static let Triggered = #selector(Each._trigger(timer:))
+    static let triggered = #selector(Each._trigger(timer:))
 }
