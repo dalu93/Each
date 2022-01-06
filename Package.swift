@@ -18,12 +18,6 @@ let package = Package(
         .target(
             name: "Each",
             path: "Sources",
-            exclude: [
-                "Info.plist",
-            ],
-            linkerSettings: [
-                .linkedFramework("UIKit"),
-            ]
         ),
     ]
 )
