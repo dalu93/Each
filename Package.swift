@@ -17,7 +17,13 @@ let package = Package(
     targets: [
         .target(
             name: "Each",
-            path: "Sources"
+            path: "Sources",
+            exclude: [
+                "Info-iOS.plist",
+                "Info-macOS.plist",
+                "Info-tvOS.plist",
+                "Info-watchOS.plist"
+            ]
         ),
     ]
 )
