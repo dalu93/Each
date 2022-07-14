@@ -172,7 +172,7 @@ open class Each {
     public func restart() {
         guard let _performClosure = _performClosure else { fatalError("Don't call the method `start()` without stopping it before.") }
         
-        _ = perform(closure: _performClosure)
+        perform(closure: _performClosure)
     }
 }
 
